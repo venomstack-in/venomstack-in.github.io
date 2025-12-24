@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+/* TOP BAR */
+.pccoermenu ul {
+  display: flex;
+  justify-content: center;
+  background: #161616;
+  padding: 6px 0;
+}
+
+.pccoermenu li {
+  margin: 0 8px;
+}
+
+.pccoermenu a {
+  font-size: 10px;
+  opacity: 0.9;
+}
+
+/* MAIN HEADER */
+.menu {
+  background: black;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* HEADER ROW */
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LOGO */
+.logo {
+  width: 100px;
+  margin-right: 30px;
+  z-index: 1001;
+}
+
+/* MENU (DESKTOP) */
+.mainmenu ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.mainmenu a {
+  font-weight: 700;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* CHECKBOX */
+#menucheck {
+  display: none;
+}
+
+/* MOBILE FULLSCREEN MENU */
+@media (max-width: 800px) {
+
+  /* show hamburger */
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+  }
+
+  /* fullscreen menu */
+  .mainmenu {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.222);
+    display: none;
+    z-index: 1000;
+  }
+
+  .mainmenu ul {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.222);
+  }
+
+  .mainmenu li {
+    padding: 14px 0;
+  }
+
+  /* show menu */
+  #menucheck:checked ~ .nav-center .mainmenu {
+    display: block;
+  }
+}
