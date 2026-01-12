@@ -7,6 +7,9 @@
   font-family: Google Sans Flex;
   text-decoration: none;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: white;
 }
 
 body {
@@ -68,7 +71,6 @@ nav {
 
 .menu a {
   color: rgb(255, 255, 255);
-  text-decoration: none;
   font-size: 16px;
   font-weight: 600;
 }
@@ -91,7 +93,81 @@ nav {
   border-radius: 5px;
 }
 
+/*CENTER WEBSITE*/
+
+.centercontainer {
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+}
+
+/* INDEX ABOUT (BRIEF ABOUT ON INDEX PAGE) */
+
+.index-about {
+  width: 100%;
+  margin-top: 50px;
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.index-about:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.index-about h2 {
+  margin: 10px 35px;
+}
+
+.in-title {
+  color: rgba(255, 255, 255, 0.7);
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 10px;
+  margin: 0 35px;
+}
+
+.in-title::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: rgba(192, 165, 255, 0.7);
+  display: inline-block;
+  margin-left: 7px;
+}
+
+.abouttext-link {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.abouttext-link p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 30px;
+  width: 70%;
+  text-align: left;
+  margin: 0 30px;
+}
+
+.about-index-link {
+  border: 0.5px solid rgba(255, 255, 255, 0.7);
+  font-size: small;
+  height: min-content;
+  min-width: 200px;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 0 40px;
+}
+
+.about-index-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 /* MOBILE MENU */
+
 @media (max-width: 900px) {
   .hamburger {
     display: block;
@@ -103,10 +179,11 @@ nav {
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: #17171762;
+    background: #130019bb;
     flex-direction: column;
     gap: 0;
     transition: right 0.3s ease-in-out;
+    backdrop-filter: blur(2px);
     /* border-left: 0.5px solid rgba(255, 255, 255, 0.129); */
   }
 
@@ -122,5 +199,31 @@ nav {
 
   .menu a:hover {
     background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .centercontainer {
+    width: 100%;
+  }
+
+  .index-about {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    margin: 5px 0;
+  }
+  .index-about:hover {
+    background-color: transparent;
+  }
+  .abouttext-link {
+    display: inline;
+  }
+
+  .abouttext-link p{
+    width: 90%;
+  }
+  
+  .about-index-link {
+    margin: 10px auto;
+    display: block;
   }
 }

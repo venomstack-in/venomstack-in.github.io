@@ -11,6 +11,12 @@ function toggleMenu() {
   }
 }
 
-fetch("navbar.html")
+fetch("fetch/navbar.html")
   .then((res) => res.text())
   .then((data) => (document.getElementById("navbar").innerHTML = data));
+
+fetch("fetch/index-about.html")
+  .then((res) => res.text())
+  .then((data) => (document.getElementById("index-about").innerHTML = data));
+
+  
