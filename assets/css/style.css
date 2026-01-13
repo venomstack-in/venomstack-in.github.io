@@ -105,7 +105,7 @@ nav {
 
 .index-about {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 30px;
   border: 0.5px solid rgba(255, 255, 255, 0.2);
   padding: 10px;
   border-radius: 10px;
@@ -130,7 +130,7 @@ nav {
 
 .in-title::after {
   content: "";
-  width: 100px;
+  width: 200px;
   height: 1px;
   background-color: rgba(192, 165, 255, 0.7);
   display: inline-block;
@@ -223,7 +223,8 @@ nav {
   }
   
   .about-index-link {
-    margin: 10px auto;
+    margin: 20px auto;
     display: block;
+    width: max-content;
   }
 }

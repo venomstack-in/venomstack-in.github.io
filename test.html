@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JSON Slider</title>
+<style>
+  .slider {
+    width: 800px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .slides img {
+    width: 100%;
+    display: none;
+  }
+
+  .slides img.active {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+  .dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+    background: #bbb;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background: #333;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="slider">
+  <div class="slides"></div>
+  <button class="nav prev">&#10094;</button>
+  <button class="nav next">&#10095;</button>
+</div>
+<div class="dots"></div>
+
+<script>
+const jsonData = [
+  { id: 1, description: "Old Image", url: "https://picsum.photos/id/1015/800/400" },
+  { id: 2, description: "Middle Image", url: "https://picsum.photos/id/1016/800/400" },
+  { id: 3, description: "Latest Image", url: "https://picsum.photos/id/1018/800/400" }
+];
+
+const images = jsonData.reverse();
+let currentIndex = 0;
+let interval;
+
+const slides = document.querySelector(".slides");
+const dotsContainer = document.querySelector(".dots");
+
+images.forEach((img, index) => {
+  const image = document.createElement("img");
+  image.src = img.url;
+  image.classList.add(index === 0 ? "active" : "");
+  slides.appendChild(image);
+
+  const dot = document.createElement("span");
+  dot.className = "dot" + (index === 0 ? " active" : "");
+  dot.onclick = () => showSlide(index);
+  dotsContainer.appendChild(dot);
+});
+
+function showSlide(index) {
+  const imgs = document.querySelectorAll(".slides img");
+  const dots = document.querySelectorAll(".dot");
+
+  imgs[currentIndex].classList.remove("active");
+  dots[currentIndex].classList.remove("active");
+
+  currentIndex = index;
+
+  imgs[currentIndex].classList.add("active");
+  dots[currentIndex].classList.add("active");
+
+  resetAuto();
+}
+
+function nextSlide() {
+  showSlide((currentIndex + 1) % images.length);
+}
+
+function prevSlide() {
+  showSlide((currentIndex - 1 + images.length) % images.length);
+}
+
+document.querySelector(".next").onclick = nextSlide;
+document.querySelector(".prev").onclick = prevSlide;
+
+function startAuto() {
+  interval = setInterval(nextSlide, 3000);
+}
+
+function resetAuto() {
+  clearInterval(interval);
+  startAuto();
+}
+
+startAuto();
+</script>
+
+</body>
+</html>
