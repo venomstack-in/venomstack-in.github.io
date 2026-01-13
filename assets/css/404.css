@@ -1,0 +1,29 @@
+h1 {
+  margin: 10px 0 0 0;
+  font-size: 150px;
+  text-align: center;
+  color: rgb(223, 210, 255);
+}
+
+h4 {
+  text-align: center;
+  font-size: 70px;
+}
+
+.s-message {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.home-btn {
+  margin: auto;
+  display: block;
+  border: 0.5px solid rgb(223, 210, 255);
+  width: max-content;
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: rgb(223, 210, 255);
+}
+.home-btn:hover {
+  opacity: 70%;
+}
