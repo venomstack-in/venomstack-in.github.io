@@ -1,4 +1,4 @@
-// Menu Bar Hamburger and Cross Changing 
+// Menu Bar Hamburger and Cross Changing
 
 function toggleMenu() {
   const menu = document.getElementById("menu");
@@ -13,7 +13,7 @@ function toggleMenu() {
   }
 }
 
-// To Fetch and Serve Data on Main Index Page 
+// To Fetch and Serve Data on Main Index Page
 
 fetch("fetch/navbar.html")
   .then((res) => res.text())
@@ -25,7 +25,23 @@ fetch("fetch/index-about.html")
 
 // Lazy Loading of Images
 
-const image = document.createElement("img");
-image.src = img.url;
-image.alt = img.description;
-image.loading = "lazy";
+const images = [
+    "/assets/js/slider/art.jpg",
+    "/assets/js/slider/maibhavan.jpeg",
+    "/assets/js/slider/intellect.jpg"
+];
+
+let index = 0;
+const slider = document.querySelector(".mainslider");
+
+if (!slider) {
+    console.error("❌ .mainslider not found");
+}
+
+// first image
+slider.style.backgroundImage = `url(${images[index]})`;
+
+setInterval(() => {
+    index = (index + 1) % images.length;
+    slider.style.backgroundImage = `url(${images[index]})`;
+}, 2000);
