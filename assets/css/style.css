@@ -16,7 +16,8 @@ body {
   background: black;
   color: white;
   overflow-x: hidden;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       ellipse 80% 60% at 50% 0%,
       rgba(139, 92, 246, 0.25),
       transparent 70%
@@ -166,6 +167,19 @@ nav {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.mainslider {
+  width: 80%;
+  height: 500px;
+  background-image: url(../images/slider/art.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: background-image 0.6s ease-in-out;
+}
+
 /* MOBILE MENU */
 
 @media (max-width: 900px) {
@@ -218,13 +232,45 @@ nav {
     display: inline;
   }
 
-  .abouttext-link p{
+  .abouttext-link p {
     width: 90%;
   }
-  
+
   .about-index-link {
     margin: 20px auto;
     display: block;
     width: max-content;
+  }
+
+  .mainslider {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+.teamtitle {
+  text-align: center;
+  margin: 10px;
+}
+
+.inteam {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.user{
+  border: 0.5px solid white;
+  border-radius: 10px;
+}
+
+.user img{
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (max-width: 650px) {
+  .mainslider {
+    height: 200px;
   }
 }
