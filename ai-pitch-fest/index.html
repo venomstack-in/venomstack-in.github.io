@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venom Stack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="static/logo.png">
+  <script src="https://kit.fontawesome.com/96d552640e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../main.css">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="https://www.venomstack.in/#home">
+    <div class="logo-text">
+      <div class="logo-icon">
+        <img src="../static/logo.png" alt="Venom Stack" />
+      </div>
+      <span class="logo-slash">/</span>
+      VENOM STACK
+    </div>
+  </a>
+
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="menu" id="menu">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#events" onclick="closeMenu()">Events</a>
+    <a href="#team" onclick="closeMenu()">Team</a>
+    <a href="#gallery" onclick="closeMenu()">Gallery</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+    <a href="https://www.pccoer.com/bca/bca-about.php" class="btn-dept" onclick="closeMenu()">BCA Dept.</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" onclick="toggleTheme()">
+      <span class="toggle-icon icon-sun">☀️</span>
+      <span class="toggle-icon icon-moon">🌙</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg-grid"></div>
+
+  <!-- Animated orbit canvas -->
+  <div class="hero-canvas">
+    <div class="orbit-ring"><span class="orbit-dot"></span></div>
+    <div class="orbit-ring"><span class="orbit-dot"></span></div>
+    <div class="orbit-ring"><span class="orbit-dot"></span></div>
+    <div class="orbit-ring"><span class="orbit-dot"></span></div>
+    <div class="orbit-center">
+      <img src="../static/logo.png" alt="VS" />
+    </div>
+  </div>
+
+  <!-- Floating tech tags -->
+  <div class="float-tag t1">💻 Web Dev</div>
+  <div class="float-tag t2">🤖 AI & ML</div>
+  <div class="float-tag t3">🔐 Cybersecurity</div>
+  <div class="float-tag t4">☁️ Cloud</div>
+
+  <div class="hero-content">
+
+    <h1 class="hero-title">
+      AI Pitch Fest
+    </h1>
+
+    <p class="hero-sub">
+AI Pitch Fest is an innovation event where participants pitch AI-powered ideas designed to solve real-world problems, encouraging creativity, practical thinking, and impactful technology solutions.
+    </p>
+
+    <div class="hero-cta">
+      <a href="https://forms.gle/CJ1VtVjwx8fCbYxL6"><button class="btn-primary">Register Now</button></a>
+    </div>
+
+
+    
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label fade-in">Get In Touch</p>
+  <h2 class="section-title fade-in">Contact Us</h2>
+  <p class="section-desc fade-in">Have a question or want to collaborate? We'd love to hear from you.</p>
+
+  <div class="contact-info fade-in" style="margin-top:48px; max-width: 520px;">
+    <div class="contact-item">
+      <div class="contact-icon">📧</div>
+      <div>
+        <div class="contact-item-title">Email</div>
+        <div class="contact-item-val"><a href="mailto:venomstack.pccoer@gmail.com">venomstack.pccoer@gmail.com</a></div>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">📍</div>
+      <div>
+        <div class="contact-item-title">Location</div>
+        <div class="contact-item-val">BCA Department, PCCOE &amp; R, Ravet</div>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">📱</div>
+      <div>
+        <div class="contact-item-title">Instagram</div>
+        <div class="contact-item-val"><a href="https://www.instagram.com/_venom_stack/" target="_blank">@_venom_stack</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <div class="footer-logo">
+      <img src="static/logo.png" alt="" width="30px">
+      VENOM STACK
+    </div>
+    <span class="footer-text">© 2026 Venom Stack · BCA Department · PCCOE &amp; R</span>
+  </div>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#events">Events</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+
+</body>
+</html>
