@@ -613,6 +613,9 @@ footer {
 
 /* ─── MOBILE ─── */
 @media (max-width: 900px) {
+  .logo-text{
+    font-size:12px;
+  }
   nav { padding: 0 20px; }
   .menu {
     position: fixed;
