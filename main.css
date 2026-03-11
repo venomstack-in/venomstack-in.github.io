@@ -344,7 +344,7 @@ section { padding: 100px 44px 80px; max-width: 1200px; margin: 0 auto; }
 
 .hero-title {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(42px, 6.5vw, 65px);
+  font-size: clamp(30px, 6.5vw, 65px);
   font-weight: 900; line-height: 1.01;
   margin-bottom: 22px;
   letter-spacing: -1.5px;
