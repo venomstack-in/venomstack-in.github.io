@@ -73,7 +73,8 @@ body {
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   overflow-x: hidden;
-  transition: background 0.35s ease, color 0.35s ease;
+  transition: background 0.035s ease, color 0.035s ease;
+  user-select: none;
 }
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
@@ -343,7 +344,7 @@ section { padding: 100px 44px 80px; max-width: 1200px; margin: 0 auto; }
 
 .hero-title {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(42px, 6.5vw, 80px);
+  font-size: clamp(42px, 6.5vw, 65px);
   font-weight: 900; line-height: 1.01;
   margin-bottom: 22px;
   letter-spacing: -1.5px;
@@ -520,6 +521,14 @@ section { padding: 100px 44px 80px; max-width: 1200px; margin: 0 auto; }
   border: 2px solid var(--chip-border);
   font-family: 'Syne', sans-serif;
 }
+
+.avatar img{
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  pointer-events: none;
+}
+
 .avatar.coral { background: linear-gradient(135deg, var(--coral-dark), var(--coral)); }
 .avatar.blue { background: linear-gradient(135deg, var(--blue), var(--blue-light)); }
 
