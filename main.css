@@ -506,10 +506,24 @@ section { padding: 100px 44px 80px; max-width: 1200px; margin: 0 auto; }
 .team-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 14px; padding: 28px 20px;
+  border-radius: 14px; 
+  padding: 28px 20px;
+  padding-bottom: 10px;
   text-align: center; box-shadow: var(--card-shadow);
   transition: all 0.3s; backdrop-filter: blur(12px);
 }
+
+.team-social *{
+  color: var(--text2);
+  margin: 12px 0;
+  font-size: large;
+}
+
+
+.team-social *:hover{
+  color: var(--teal);
+}
+
 .team-card:hover { transform: translateY(-4px); border-color: var(--chip-border); }
 
 .avatar {
