@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 .projects-heading{
-    font-family: Syne;
+    font-family: Bricolage Grotesque;
     font-size: larger;
     margin-top: 80px;
     text-align: center;
@@ -15,7 +17,7 @@
     font-size: 18px;
     padding: 5px;
     padding-top: 15px;
-    font-family: Syne;
+    font-family: Bricolage Grotesque;
 }
 
 .project-card{
@@ -28,7 +30,7 @@
 }
 
 .link-button{
-    font-family: DM Sans;
+    font-family: Inter;
     margin: auto;
     display: block;
     padding: 10px 15px;
