@@ -1,0 +1,45 @@
+.projects-heading{
+    font-family: Syne;
+    font-size: larger;
+    margin-top: 80px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.projects{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.project-name{
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 4px; */
+    padding-top: 15px;
+    font-family: Syne;
+}
+
+.project-card{
+    width: 300px;
+    height: max-content;
+    /* border: 2px solid rgba(26, 158, 143, 0.345); */
+    box-shadow: 0px 0px 5px 0px rgba(128, 128, 128, 0.200);
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.link-button{
+    font-family: DM Sans;
+    margin: auto;
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    background-color: rgb(26, 158, 143);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
